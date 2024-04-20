@@ -11,6 +11,7 @@
 		746E8C3E2BD0AC7700EA9653 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8C3D2BD0AC7700EA9653 /* ContentView.swift */; };
 		746E8C402BD0AC7800EA9653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746E8C3F2BD0AC7800EA9653 /* Assets.xcassets */; };
 		746E8C442BD0AC7800EA9653 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 746E8C432BD0AC7800EA9653 /* Preview Assets.xcassets */; };
+		74C0C29C2BD15F8000CB666B /* LoadingImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C0C29B2BD15F8000CB666B /* LoadingImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		746E8C3F2BD0AC7800EA9653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		746E8C412BD0AC7800EA9653 /* SwfitUI_CupcakeCorner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwfitUI_CupcakeCorner.entitlements; sourceTree = "<group>"; };
 		746E8C432BD0AC7800EA9653 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74C0C29B2BD15F8000CB666B /* LoadingImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 		746E8C2F2BD0AC7700EA9653 = {
 			isa = PBXGroup;
 			children = (
+				74C0C29B2BD15F8000CB666B /* LoadingImage.swift */,
 				746E8C3A2BD0AC7700EA9653 /* SwfitUI-CupcakeCorner */,
 				746E8C392BD0AC7700EA9653 /* Products */,
 			);
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				746E8C3E2BD0AC7700EA9653 /* ContentView.swift in Sources */,
+				74C0C29C2BD15F8000CB666B /* LoadingImage.swift in Sources */,
 				746E8C3C2BD0AC7700EA9653 /* SwfitUI_CupcakeCornerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
