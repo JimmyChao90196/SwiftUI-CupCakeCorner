@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct Response: Codable {
-    var results: [Result]
+    var results: [CustomResult]
 }
 
-struct Result: Codable {
+struct CustomResult: Codable {
     var trackId: Int
     var trackName: String
     var collectionName: String
@@ -19,7 +19,7 @@ struct Result: Codable {
 
 struct ContentView: View {
     
-    @State var results = [Result]()
+    @State var results = [CustomResult]()
 
     
     var body: some View {

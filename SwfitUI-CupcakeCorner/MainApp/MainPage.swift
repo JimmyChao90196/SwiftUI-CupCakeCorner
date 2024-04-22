@@ -84,7 +84,6 @@ class Order: Codable {
         }
         
         return cost
-        
     }
     
     enum CodingKeys: CodingKey {
@@ -104,33 +103,34 @@ class Order: Codable {
 
 struct MainPage: View {
     
-    @State private var order = Order()
+    //@State private var order = Order()
+    @Bindable private var viewModel = ViewModel()
     
     var body: some View {
         NavigationStack {
             List {
                 Section {
-                    Picker("Please select the type", selection: $order.type) {
+                    Picker("Please select the type", selection: $viewModel.order.type) {
                         ForEach(Order.types.indices, id: \.self) { num in
                             Text("\(Order.types[num])")
                         }
                     }
                     
-                    Stepper("Order \(order.quantity) cakes", value: $order.quantity)
+                    Stepper("Order \(viewModel.order.quantity) cakes", value: $viewModel.order.quantity)
                 }
                 
                 Section {
-                    Toggle("Special request", isOn: $order.specialRequest)
+                    Toggle("Special request", isOn: $viewModel.order.specialRequest)
                     
-                    if order.specialRequest {
-                        Toggle("Add extra topping", isOn: $order.addExtrafrosting)
-                        Toggle("Add sprinkles", isOn: $order.addSpinkles)
+                    if viewModel.order.specialRequest {
+                        Toggle("Add extra topping", isOn: $viewModel.order.addExtrafrosting)
+                        Toggle("Add sprinkles", isOn: $viewModel.order.addSpinkles)
                     }
                 }
                 
                 Section {
                     NavigationLink("Order detail") {
-                        AddressView(order: order)
+                        AddressView(viewModel: viewModel)
                     }
                 }
             }
@@ -140,31 +140,8 @@ struct MainPage: View {
     }
 }
 
-struct AddressView: View {
-    
-    @Bindable var order: Order
-    
-    var body: some View {
-        List {
-            Section {
-                TextField("Name", text: $order.name)
-                TextField("StreetAddress", text: $order.streetAddress)
-                TextField("City", text: $order.city)
-                TextField("Zip", text: $order.zip)
-            }
-            
-            Section {
-                NavigationLink("Checkout Details") {
-                    CheckoutView(order: order)
-                }.disabled(order.hasValidAddress == false)
-            }
-        }
-        .navigationTitle("Delivery Detail")
-        .navigationBarTitleDisplayMode(.large)
-    }
-}
-
-
 #Preview {
     MainPage()
 }
+
+
