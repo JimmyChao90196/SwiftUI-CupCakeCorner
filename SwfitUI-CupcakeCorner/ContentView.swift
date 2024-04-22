@@ -20,6 +20,7 @@ struct Result: Codable {
 struct ContentView: View {
     
     @State var results = [Result]()
+
     
     var body: some View {
         List(results, id: \.trackId) { result in

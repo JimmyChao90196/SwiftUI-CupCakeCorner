@@ -11,7 +11,7 @@ import SwiftUI
 struct SwfitUI_CupcakeCornerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainPage()
         }
     }
 }
